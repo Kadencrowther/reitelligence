@@ -14,105 +14,102 @@
             width: 100%;
             height: 100%;
         }
-        
+
         .navbar {
-            display: flex;
-            justify-content: center; /* Center content */
-            align-items: center;
-            background-color: #fff; /* White background */
-            padding: 10px 20px;
-            position: sticky; /* This is the key property */
-            top: 0; /* Sticks to the top of the viewport */
-            width: 100%;
-            z-index: 1000; /* Ensures the navbar is above other content */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .navbar .logo {
-            display: flex;
-            justify-content: center; /* Center the logo */
-            flex-grow: 1; /* Allow the logo to grow */
-        }
+        display: flex;
+        align-items: center;
+        background-color: #fff; /* White background */
+        padding: 10px 20px;
+        position: sticky; /* This is the key property */
+        top: 0; /* Sticks to the top of the viewport */
+        width: 100%;
+        z-index: 1000; /* Ensures the navbar is above other content */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-        .navbar .logo img {
-            height: 70px; /* Adjust height as needed */
-        }
-        .navbar .dots-icon {
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: #000; /* Black text */
-            position: absolute; /* Position absolute */
-            left: 20px; /* Place it on the left end */
-        }
-        .navbar .dots-icon:hover {
-            color: #007BFF;
-        }
+    .navbar .dots-icon {
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #000; /* Black text */
+        margin-right: auto; /* Push the dots icon to the left */
+    }
 
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 40px;
-            left: 10px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1001;
-            width: 150px;
-            border-radius: 5px;
-            overflow: hidden;
-        }
+    .navbar .dots-icon:hover {
+        color: #007BFF;
+    }
 
-        .dropdown a {
-            color: #000;
-            text-decoration: none;
-            display: block;
-            padding: 10px;
-            text-align: left;
-        }
+    .navbar .logo {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center; /* Center the logo */
+    }
 
-        .dropdown a:hover {
-            background-color: #f1f1f1;
-        }
-        
+    .navbar .logo img {
+        height: 70px; /* Adjust height as needed */
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+        width: 150px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .dropdown a {
+        color: #000;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .dropdown a:hover {
+        background-color: #f1f1f1;
+    }
+
         .section {
-            height: 100vh;
             display: flex;
             flex-direction: column; /* Stack elements vertically */
             align-items: center;
             justify-content: center; /* Center elements vertically */
-            padding: 0 20px; /* Add padding to prevent text from touching edges */
+            padding: 20px; /* Add padding to prevent text from touching edges */
             box-sizing: border-box;
+            width: 100%;
         }
 
         .video-section {
             width: 100%; /* Use full width of the container */
-            margin: 0 auto; /* Center the section */
-            padding: 20px; /* Padding around the content */
             text-align: center; /* Center align text */
         }
 
         .video-section .video-title,
         .video-section .video-description {
             margin: 0; /* Remove default margins */
-            padding: 0 10%; /* Add padding on left and right */
+            padding: 0 5%; /* Add padding on left and right */
             box-sizing: border-box;
         }
 
         .video-section h2 {
-            font-size: 4vw;
+            font-size: 6vw;
             margin: 10px 0;
         }
 
         .video-section p {
-            font-size: 1.5vw;
+            font-size: 4vw;
             margin-bottom: 20px;
         }
 
         .video-section iframe {
             width: 100%;
-            height: 50vw; /* Adjust height based on the width */
+            height: 56.25vw; /* 16:9 aspect ratio */
             max-height: 400px;
             border: none;
-            aspect-ratio: 16 / 9;
         }
 
         .features-section {
@@ -126,7 +123,7 @@
 
         .carousel-track-container {
             overflow: hidden;
-            width: 80%; /* Adjust based on the total width to show three images */
+            width: 90%; /* Adjust based on the total width to show three images */
             max-width: 700px; /* Adjust the max width as needed */
             margin: auto;
             position: relative;
@@ -150,8 +147,8 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            padding: 16px;
-            font-size: 18px;
+            padding: 10px;
+            font-size: 1rem;
             font-weight: bold;
             color: white;
             background-color: rgba(0, 0, 0, 0.5);
@@ -178,6 +175,7 @@
             color: #fff;
             text-align: center;
             width: 100%;
+            padding: 40px 20px;
         }
 
         .form-section form {
@@ -186,13 +184,15 @@
             align-items: center;
             width: 100%;
             padding: 20px;
+            box-sizing: border-box;
         }
 
         .form-section input, .form-section button {
-            width: 80%;
+            width: 90%;
             max-width: 400px;
             margin: 10px 0;
             padding: 15px;
+            box-sizing: border-box;
         }
 
         .form-section button {
@@ -226,21 +226,21 @@
         }
 
         .large-text {
-            font-size: 20vh; /* Adjust value as needed */
+            font-size: 10vw; /* Adjust value as needed */
             line-height: 1.2; /* Adjust value as needed */
         }
 
         .medium-text {
-            font-size: 2vw; /* Adjust the value as needed */
+            font-size: 5vw; /* Adjust the value as needed */
             margin: 10px 0;
         }
 
-        @media (max-width: 600px) {
+        @media (min-width: 600px) {
             .video-section h2, .video-section p {
-                font-size: 5vw;
+                font-size: 2vw;
             }
             .features-section h1, .features-section p {
-                font-size: 5vw;
+                font-size: 2vw;
             }
             .feature-column {
                 width: 100%;
@@ -307,8 +307,7 @@
             <li>Refer just 3 people who subscribe to the waitlist and get 1 month of the software free</li>
             <li>All participants with referrals will receive discounted pricing</li>
         </ul>
-        <p>Simply have your friends and co-workers input your name in the referral part of the waitlist signup. 
-            Start referring now and enjoy exclusive benefits!</p>
+        <p></p>
     </div>
 
     <style>
@@ -323,13 +322,13 @@
     }
 
     .referral-section h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin-bottom: 20px;
         color: #007BFF; /* Match blue color with other sections */
     }
 
     .referral-section p, .referral-section li {
-        font-size: 1.4rem; /* Bigger text for body content */
+        font-size: 1rem; /* Bigger text for body content */
         margin-bottom: 20px;
     }
 
@@ -340,7 +339,7 @@
     }
 
     .referral-section li {
-        font-size: 1.4rem; /* Bigger text for list items */
+        font-size: 1rem; /* Bigger text for list items */
         margin-bottom: 10px;
         text-align: center;
     }
@@ -360,7 +359,7 @@
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="text" name="phone" placeholder="Phone" required>
                 <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="interest" placeholder="How did you find out about Reitelligence?" required>
+                <input type="text" name="interest" placeholder="How did you hear about Reitelligence?" required>
                 <button type="submit">Join Waitlist</button>
             </form>
         </div>
@@ -385,7 +384,7 @@
         }
 
         .form-section input, .form-section button {
-            width: 80%;
+            width: 90%;
             max-width: 400px;
             margin: 10px 0;
             padding: 15px;
